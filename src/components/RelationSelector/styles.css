@@ -1,0 +1,58 @@
+.relation-selector {
+    position: relative;
+  }
+  
+  .relation-btn {
+    background: rgba(108, 99, 255, 0.1);
+    color: var(--primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .relation-btn:hover {
+    background: rgba(108, 99, 255, 0.2);
+  }
+  
+  .relation-dropdown {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background: var(--bg-paper);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 200;
+    min-width: 200px;
+    transform-origin: top right;
+    animation: scaleIn 0.15s ease-out;
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .relation-option {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .relation-option:hover {
+    background: rgba(108, 99, 255, 0.1);
+  }
+  
+  .relation-option.active {
+    color: var(--primary);
+    font-weight: 600;
+  }

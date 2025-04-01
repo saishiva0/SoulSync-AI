@@ -1,0 +1,25 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: -280px;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-paper);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .sidebar.open {
+    left: 0;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Make sure chat history doesn't overlap footer */
+  .chat-history {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 80px; /* Space for input */
+  }
